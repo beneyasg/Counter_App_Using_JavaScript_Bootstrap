@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Counter App</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container">
+            <h1>Count:</h1>
+            <h2 id="count-el">0</h2>
+            <button onclick="increment()" class="btn btn-outline-primary mt-2 mb-2">INCREMENT</button>
+            <button onclick="decrement()" class="btn btn-outline-secondary mt-2 mb-2">DECREMENT</button><br>
+            <button onclick="save()" class="btn btn-outline-success mb-2">SAVE</button>
+            <button onclick="reset()" class="btn btn-outline-danger mb-2">RESET</button>
+            <h2 class="mt-2">Saved values:</h2>
+            <h3 id="save-el"></h3>
+        </div>
+        <script src="index.js"></script>
+        <script>
+            window.onbeforeunload = function(e){
+                return "Do you want to exit this page?";
+            }
+        </script>
+    </body>
+</html>
